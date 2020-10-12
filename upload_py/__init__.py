@@ -4,7 +4,7 @@ upload.py
 An example python library.
 """
 
-__version__ = "0.1e"
+__version__ = "0.1"
 __author__ = 'CrafterPika'
 __credits__ = 'None'
 
