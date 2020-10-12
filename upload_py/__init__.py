@@ -4,7 +4,7 @@ upload.py
 Easily Upload to services.
 """
 
-__version__ = "0.1.2"
+__version__ = "0.1.3"
 __author__ = 'CrafterPika'
 __credits__ = 'DwifteJB'
 
@@ -33,18 +33,15 @@ class anonfiles():
     def url_short(self):
         dwnld = download_url['data']['file']['url']['short']
         print(f"{dwnld}")
-        return dwnld
 
     def url_full(self):
         dwnld = download_url['data']['file']['url']['full']
         print(f"{dwnld}")
-        return dwnld
 
     def metadata(self):
         dwnld = download_url['data']['file']['url']['full']
         name = re.sub(r'^.*?/', '', file)
         print(f"Filename: {name}")
-        return dwnld
 
 class starfiles():
 
@@ -63,18 +60,15 @@ class starfiles():
     def url_file(self):
         dwnld = file_url['file']
         print(f"https://starfiles.co/file/{dwnld}")
-        return dwnld
 
     def url_file_direct(self):
         dwnld = file_url['file']
         print(f"https://starfiles.co/api/direct/{dwnld}")
-        return dwnld
 
     def url_ipa_install(self):
         dwnld = file_url['file']
         print(f"itms-services://?action=download-manifest&url=https://starfiles.co/api/installipa/{dwnld}")
         url = f"itms-services://?action=download-manifest&url=https://starfiles.co/api/installipa/{dwnld}"
-        return url
 
     def metadata(self):
         dwnld = file_url['file']
@@ -83,7 +77,6 @@ class starfiles():
         name = meta['name']
         size = meta['tidy_size']
         print(f"Name: {name}\nSize: {size}")
-        return dwnld
 
 class filepipe():
 
@@ -102,7 +95,6 @@ class filepipe():
     def url_file(self):
         print(f"{row.get_text()}")
         dwnld = row.get_text()
-        return dwnld
 
 class fileio():
 
@@ -120,4 +112,3 @@ class fileio():
     def url_file(self):
         dwnld = download_url['link']
         print(f"{dwnld}")
-        return dwnld
