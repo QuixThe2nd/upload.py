@@ -19,7 +19,7 @@ Windows 10
 
 If pip doesn't work/shows up as invalid try this:
 
-```python3 -m ensurepip```
+- ```python3 -m ensurepip```
 
 and pip3/pip should work.
 
