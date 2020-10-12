@@ -18,6 +18,5 @@ short example of usage:
 >>> file = starfiles()
 >>> file.upload("file.txt")
 >>> file.url_file()
-https://starfiles.co/file/93ebfa
 ```
 (You also can view [example.py](https://github.com/CrafterPika/upload.py/blob/main/upload_py/example.py) for all services example's)
