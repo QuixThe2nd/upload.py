@@ -1,5 +1,4 @@
 from upload.py import *
-import os
 
 #anonfiles
 print("Anonfiles:")
