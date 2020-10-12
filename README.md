@@ -14,4 +14,5 @@ short example of usage:
 >>> file = starfiles()
 >>> file.upload("file.txt")
 >>> file.url_file()
+https://starfiles.co/file/93ebfa
 ```
