@@ -23,11 +23,11 @@ print("")
 print("FilePipe:")
 file3 = filepipe()
 file3.upload(f"bootlogo.bmp")
-file3.dl_url()
+file3.url_file()
 print("")
 
 #FilePipe
 print("File.io:")
 file3 = fileio()
 file3.upload(f"bootlogo.bmp")
-file3.dl_url()
+file3.url_file()

@@ -4,7 +4,7 @@ upload.py
 Easily Upload to services.
 """
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 __author__ = 'CrafterPika'
 __credits__ = 'DwifteJB'
 
@@ -99,7 +99,7 @@ class filepipe():
         global row
         row = soup.find('code')
 
-    def dl_url(self):
+    def url_file(self):
         print(f"{row.get_text()}")
         dwnld = row.get_text()
         return dwnld
@@ -117,7 +117,7 @@ class fileio():
         global download_url
         download_url = json.loads(response.text)
 
-    def dl_url(self):
+    def url_file(self):
         dwnld = download_url['link']
         print(f"{dwnld}")
         return dwnld
