@@ -1,18 +1,30 @@
 # upload.py
 upload files to https://starfiles.co, https://anonfiles.com, https://filepipe.io and https://file.io with ease
 
-# Requirments
+Version 1.0
+Created by <a href="https://github.com/CrafterPika">CrafterPika</a> and <a href="https://github.com/DwifteJB">DwifteJB</a>
+## Requirements
 - Python 3.8=> (only tested it there)
-- Windows 10 (Only tested it there)
 
-# installation
-1. You need [git](https://git-scm.com/)
-2. Install wheel (```pip install wheel```)
-3. ```pip install git+https://github.com/CrafterPika/upload.py.git```
+## Tested Systems
+Debian based system (Ubuntu, Debian, Linux Mint, PopOS)
+Windows 10
 
-# example
+# Installation
+1. Install python via your package manager or at [Python](https://python.org)
+2. Install [git](https://git-scm.com/)
+3. Install wheel (```pip install wheel```)
+4. ```pip install git+https://github.com/CrafterPika/upload.py.git```
 
-short example of usage:
+If pip doesn't work/shows up as invalid try this:
+
+```python3 -m ensurepip```
+
+and pip3/pip should work.
+
+### Example
+
+Short Example:
 ```py
 >>> from upload_py import *
 >>> file = starfiles()
