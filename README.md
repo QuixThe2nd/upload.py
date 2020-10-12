@@ -7,9 +7,8 @@ Created by <a href="https://github.com/CrafterPika">CrafterPika</a> and <a href=
 - Python 3.8=> (only tested it there)
 
 ## Tested Systems
-Debian based system (Ubuntu, Debian, Linux Mint, PopOS)
-
-Windows 10
+- Debian based system (Ubuntu, Debian, Linux Mint, PopOS)
+- Windows 10
 
 # Installation
 1. Install python via your package manager or at [Python](https://python.org)
