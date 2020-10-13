@@ -4,7 +4,7 @@ upload.py
 upload files to https://starfiles.co, https://anonfiles.com, https://filepipe.io and https://file.io with ease
 """
 
-__version__ = "0.1.4"
+__version__ = "0.15"
 __author__ = 'CrafterPika'
 __credits__ = 'Dwifte'
 
@@ -52,22 +52,22 @@ class starfiles():
         files = {
             'upload': (f'{os.getcwd()}/{filename}', open( f'{os.getcwd()}/{filename}', 'rb')),
         }
-        response = requests.post('https://starfiles.co/api/upload_file', files=files)
+        response = requests.post('https://starfiles.ml/api/upload_file', files=files)
         global file_url
         file_url = json.loads(response.text)
 
 
     def url_file(self):
         dwnld = file_url['file']
-        print(f"https://starfiles.co/file/{dwnld}")
+        print(f"https://starfiles.ml/file/{dwnld}")
 
     def url_file_direct(self):
         dwnld = file_url['file']
-        print(f"https://starfiles.co/api/direct/{dwnld}")
+        print(f"https://starfiles.ml/api/direct/{dwnld}")
 
     def url_ipa_install(self):
         dwnld = file_url['file']
-        print(f"itms-services://?action=download-manifest&url=https://starfiles.co/api/installipa/{dwnld}")
+        print(f"itms-services://?action=download-manifest&url=https://starfiles.ml/api/installipa/{dwnld}")
 
     def metadata(self):
         dwnld = file_url['file']
