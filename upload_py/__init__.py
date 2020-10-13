@@ -1,11 +1,12 @@
 """
 upload.py
-An example python library.
+
+upload files to https://starfiles.co, https://anonfiles.com, https://filepipe.io and https://file.io with ease
 """
 
 __version__ = "0.1.4"
 __author__ = 'CrafterPika'
-__credits__ = 'None'
+__credits__ = 'Dwifte'
 
 
 import json
