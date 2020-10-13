@@ -1,3 +1,10 @@
+# 0.17
+- bump version due to pypi org upload problems.
+
+# 0.16
+- is now on pypi.org
+- also a fix in uploading to pypi
+
 # 0.15
 - use starfiles.ml over starfiles.co
 
