@@ -1,7 +1,7 @@
 # upload.py
 upload files to https://starfiles.co, https://anonfiles.com, https://filepipe.io and https://file.io with ease
 
-Version 0.1.3<br>
+Version 0.1.4<br>
 Created by <a href="https://github.com/CrafterPika">CrafterPika</a> and <a href="https://github.com/DwifteJB">DwifteJB</a>
 ## Requirements
 - Python 3.8=> (only tested it there)
