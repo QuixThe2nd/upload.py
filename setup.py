@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='upload.py',
-    version='0.1.4',
+    version='0.15',
     description='An mutiple upload service library',
     url='https://github.com/CrafterPika/upload.py',
     author='upload.py',
