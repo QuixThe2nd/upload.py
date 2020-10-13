@@ -1,12 +1,11 @@
 """
 upload.py
-
-Easily Upload to services.
+An example python library.
 """
 
-__version__ = "0.1.3"
+__version__ = "0.1.4"
 __author__ = 'CrafterPika'
-__credits__ = 'DwifteJB'
+__credits__ = 'None'
 
 
 import json
@@ -68,7 +67,6 @@ class starfiles():
     def url_ipa_install(self):
         dwnld = file_url['file']
         print(f"itms-services://?action=download-manifest&url=https://starfiles.co/api/installipa/{dwnld}")
-        url = f"itms-services://?action=download-manifest&url=https://starfiles.co/api/installipa/{dwnld}"
 
     def metadata(self):
         dwnld = file_url['file']
@@ -92,9 +90,8 @@ class filepipe():
         global row
         row = soup.find('code')
 
-    def url_file(self):
+    def dl_url(self):
         print(f"{row.get_text()}")
-        dwnld = row.get_text()
 
 class fileio():
 
@@ -109,6 +106,6 @@ class fileio():
         global download_url
         download_url = json.loads(response.text)
 
-    def url_file(self):
+    def dl_url(self):
         dwnld = download_url['link']
         print(f"{dwnld}")
