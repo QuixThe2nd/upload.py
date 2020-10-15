@@ -4,7 +4,7 @@ upload.py
 upload files to https://starfiles.co, https://anonfiles.com, https://filepipe.io and https://file.io with ease
 """
 
-__version__ = "0.17"
+__version__ = "0.18"
 __author__ = 'CrafterPika'
 __credits__ = 'Dwifte'
 
@@ -25,23 +25,26 @@ class anonfiles():
             'file': (f'{os.getcwd()}/{filename}', open( f'{os.getcwd()}/{filename}', 'rb')),
         }
         response = requests.post('https://api.anonfiles.com/upload', files=files)
+        global dwnld_anon_short
+        global dwnld_anon_full
         global download_url
         global file
         file = filename
         download_url = json.loads(response.text)
+        dwnld_anon_short = download_url['data']['file']['url']['short']
+        dwnld_anon_full = download_url['data']['file']['url']['full']
 
     def url_short(self):
-        dwnld = download_url['data']['file']['url']['short']
-        print(f"{dwnld}")
+        return dwnld_anon_short
 
     def url_full(self):
-        dwnld = download_url['data']['file']['url']['full']
-        print(f"{dwnld}")
+        return dwnld_anon_full
 
     def metadata(self):
         dwnld = download_url['data']['file']['url']['full']
         name = re.sub(r'^.*?/', '', file)
-        print(f"Filename: {name}")
+        filename1 = f"Filename: {name}"
+        return filename1
 
 class starfiles():
 
@@ -55,27 +58,30 @@ class starfiles():
         response = requests.post('https://starfiles.ml/api/upload_file', files=files)
         global file_url
         file_url = json.loads(response.text)
+        global dwnld_star
+        dwnld_star = file_url['file']
 
 
     def url_file(self):
-        dwnld = file_url['file']
-        print(f"https://starfiles.ml/file/{dwnld}")
+        dwnld = f"https://starfiles.co/file/{dwnld_star}"
+        return dwnld
 
     def url_file_direct(self):
-        dwnld = file_url['file']
-        print(f"https://starfiles.ml/api/direct/{dwnld}")
+        dwnld = f"https://starfiles.ml/api/direct/{dwnld_star}"
+        return dwnld
 
     def url_ipa_install(self):
-        dwnld = file_url['file']
-        print(f"itms-services://?action=download-manifest&url=https://starfiles.ml/api/installipa/{dwnld}")
+        dwnld = f"itms-services://?action=download-manifest&url=https://starfiles.ml/api/installipa/{dwnld_star}"
+        return dwnld
 
     def metadata(self):
         dwnld = file_url['file']
-        response = requests.post(f'https://starfiles.co/api/file/fileinfo?file={dwnld}')
+        response = requests.post(f'https://starfiles.co/api/file/fileinfo?file={dwnld_star}')
         meta = json.loads(response.text)
         name = meta['name']
         size = meta['tidy_size']
-        print(f"Name: {name}\nSize: {size}")
+        meta = f"Name: {name}\nSize: {size}"
+        return meta
 
 class filepipe():
 
@@ -92,7 +98,8 @@ class filepipe():
         row = soup.find('code')
 
     def dl_url(self):
-        print(f"{row.get_text()}")
+        dwnld = f"{row.get_text()}"
+        return dwnld
 
 class fileio():
 
@@ -109,4 +116,4 @@ class fileio():
 
     def dl_url(self):
         dwnld = download_url['link']
-        print(f"{dwnld}")
+        return dwnld
