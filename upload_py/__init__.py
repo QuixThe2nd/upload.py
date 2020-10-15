@@ -22,7 +22,7 @@ class anonfiles():
 
     def upload(self, filename):
         files = {
-            'file': (f'{os.getcwd()}/{filename}', open( f'{os.getcwd()}/{filename}', 'rb')),
+            'file': (f'{filename}', open( f'{filename}', 'rb')),
         }
         response = requests.post('https://api.anonfiles.com/upload', files=files)
         global dwnld_anon_short
@@ -53,7 +53,7 @@ class starfiles():
 
     def upload(self, filename):
         files = {
-            'upload': (f'{os.getcwd()}/{filename}', open( f'{os.getcwd()}/{filename}', 'rb')),
+            'upload': (f'{filename}', open( f'{filename}', 'rb')),
         }
         response = requests.post('https://starfiles.ml/api/upload_file', files=files)
         global file_url
@@ -90,7 +90,7 @@ class filepipe():
 
     def upload(self, filename):
         files = {
-            'file': (f'{os.getcwd()}/{filename}', open( f'{os.getcwd()}/{filename}', 'rb')),
+            'file': (f'{filename}', open( f'{filename}', 'rb')),
         }
         response = requests.post('https://api.filepipe.io/upload.php', files=files)
         soup = BeautifulSoup(response.text, 'html.parser')
@@ -108,7 +108,7 @@ class fileio():
 
     def upload(self, filename):
         files = {
-            'file': (f'{os.getcwd()}/{filename}', open( f'{os.getcwd()}/{filename}', 'rb')),
+            'file': (f'{filename}', open( f'{filename}', 'rb')),
         }
         response = requests.post('https://file.io', files=files)
         global download_url

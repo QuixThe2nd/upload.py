@@ -1,7 +1,7 @@
 # upload.py
 upload files to https://starfiles.co, https://anonfiles.com, https://filepipe.io and https://file.io with ease
 
-Version 0.15<br>
+Version 0.19<br>
 Created by <a href="https://github.com/CrafterPika">CrafterPika</a> and <a href="https://github.com/DwifteJB">DwifteJB</a>
 ## Requirements
 - Python 3.8=> (only tested it there)
@@ -31,8 +31,10 @@ and pip3/pip should work.
 Short Example:
 ```py
 >>> from upload_py import *
+>>> import os
 >>> file = starfiles()
->>> file.upload("file.txt")
+>>> file.upload(f"{os.getcwd()}/file.txt")
 >>> file.url_file()
+'https://starfiles.co/file/288e60'
 ```
 (You also can view [example.py](https://github.com/CrafterPika/upload.py/blob/main/upload_py/example.py) for all services example's)
