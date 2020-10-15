@@ -4,7 +4,7 @@ upload.py
 upload files to https://starfiles.co, https://anonfiles.com, https://filepipe.io and https://file.io with ease
 """
 
-__version__ = "0.19"
+__version__ = "0.20"
 __author__ = 'CrafterPika'
 __credits__ = 'Dwifte'
 
@@ -63,7 +63,7 @@ class starfiles():
 
 
     def url_file(self):
-        dwnld = f"https://starfiles.co/file/{dwnld_star}"
+        dwnld = f"https://starfiles.ml/file/{dwnld_star}"
         return dwnld
 
     def url_file_direct(self):
@@ -76,7 +76,7 @@ class starfiles():
 
     def metadata(self):
         dwnld = file_url['file']
-        response = requests.post(f'https://starfiles.co/api/file/fileinfo?file={dwnld_star}')
+        response = requests.post(f'https://starfiles.ml/api/file/fileinfo?file={dwnld_star}')
         meta = json.loads(response.text)
         name = meta['name']
         size = meta['tidy_size']
