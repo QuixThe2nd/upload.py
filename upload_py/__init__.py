@@ -55,7 +55,7 @@ class starfiles():
         files = {
             'upload': (f'{filename}', open( f'{filename}', 'rb')),
         }
-        response = requests.post('https://starfiles.ml/api/upload_file', files=files)
+        response = requests.post('https://starfiles.co/api/upload/upload_file', files=files)
         global file_url
         file_url = json.loads(response.text)
         global dwnld_star
