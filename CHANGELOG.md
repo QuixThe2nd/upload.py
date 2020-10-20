@@ -1,3 +1,7 @@
+# 0.21
+- Add CI (for pypi)
+- fix starfiles uploads
+
 # 0.20
 - aww fuck i didn't fully updated all starfiles url's to .ml
 
