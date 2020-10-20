@@ -1,3 +1,6 @@
+# 0.22
+- bump version for testing
+
 # 0.21
 - Add CI (for pypi)
 - fix starfiles uploads
