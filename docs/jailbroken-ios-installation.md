@@ -3,7 +3,7 @@ This will go through installing jailbroken iOS Device <b>(I only tested it on [O
 
 ## Requirements
 
-Install any kind of Terminal (like NewTerm) from Cydia/Sileo and login as root (command: <code>su</code> | Password: <code>alpine</code>9
+Install any kind of Terminal (like NewTerm) from Cydia/Sileo and login as root (command: <code>su</code> | Password: <code>alpine</code>)
 <br>
 1. <code>apt-get install python3</code>
 2. <code>apt-get install wget</code>
