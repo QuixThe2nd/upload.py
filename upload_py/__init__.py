@@ -4,7 +4,7 @@ upload.py
 upload files to https://starfiles.co, https://anonfiles.com, https://filepipe.io and https://file.io with ease
 """
 
-__version__ = "0.23"
+__version__ = "0.24"
 __author__ = 'CrafterPika'
 __credits__ = 'Dwifte'
 
