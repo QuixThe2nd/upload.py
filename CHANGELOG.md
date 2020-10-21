@@ -1,5 +1,5 @@
 # 0.22
-- bump version for testing
+- added bayfiles
 
 # 0.21
 - Add CI (for pypi)
