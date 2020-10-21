@@ -4,7 +4,7 @@ with open('README.md', 'r') as fh:
    long_description = fh.read()
 setup(
     name='upload.py',
-    version='0.22',
+    version='0.23',
     description='An mutiple upload service library',
     url='https://github.com/CrafterPika/upload.py',
     author='upload.py',
