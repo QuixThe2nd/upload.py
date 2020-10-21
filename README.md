@@ -10,7 +10,7 @@ Created by <a href="https://github.com/CrafterPika">CrafterPika</a> and <a href=
 - Debian based system (Ubuntu, Debian, Linux Mint, PopOS)
 - Windows 10
 - https://ish.app
-- Even jailbroken iOS Devices
+- Even jailbroken iOS Devices [Installation Guide](https://github.com/CrafterPika/upload.py/blob/main/docs/jailbroken-ios-installation.md)
 
 ## Installation (Over PIP)
 1. Install python via your package manager or at [Python](https://python.org)
