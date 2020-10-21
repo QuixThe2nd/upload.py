@@ -4,7 +4,7 @@ upload.py
 upload files to https://starfiles.co, https://anonfiles.com, https://filepipe.io and https://file.io with ease
 """
 
-__version__ = "0.22"
+__version__ = "0.23"
 __author__ = 'CrafterPika'
 __credits__ = 'Dwifte'
 
@@ -56,8 +56,8 @@ class bayfiles():
             'file': (f'{filename}', open( f'{filename}', 'rb')),
         }
         response = requests.post('https://api.bayfiles.com/upload', files=files)
-        global dwnld_anon_short
-        global dwnld_anon_full
+        global dwnld_bay_short
+        global dwnld_bay_full
         global download_url
         global file
         file = filename
