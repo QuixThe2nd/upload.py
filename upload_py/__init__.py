@@ -45,6 +45,37 @@ class anonfiles():
         name = re.sub(r'^.*?/', '', file)
         filename1 = f"Filename: {name}"
         return filename1
+    
+class bayfiles():
+
+    def __init__(self):
+        pass
+
+    def upload(self, filename):
+        files = {
+            'file': (f'{filename}', open( f'{filename}', 'rb')),
+        }
+        response = requests.post('https://api.bayfiles.com/upload', files=files)
+        global dwnld_anon_short
+        global dwnld_anon_full
+        global download_url
+        global file
+        file = filename
+        download_url = json.loads(response.text)
+        dwnld_bay_short = download_url['data']['file']['url']['short']
+        dwnld_bay_full = download_url['data']['file']['url']['full']
+
+    def url_short(self):
+        return dwnld_bay_short
+
+    def url_full(self):
+        return dwnld_bay_full
+
+    def metadata(self):
+        dwnld = download_url['data']['file']['url']['full']
+        name = re.sub(r'^.*?/', '', file)
+        filename1 = f"Filename: {name}"
+        return filename1
 
 class starfiles():
 
