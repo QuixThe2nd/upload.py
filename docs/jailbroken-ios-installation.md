@@ -15,4 +15,5 @@ So you should now have PIP installed.
 ## Installing Module
 
 - <code>pip install upload.py</code><br>
+
 wait a few minutes and the module should be installed
