@@ -1,3 +1,6 @@
+# 0.24
+- bump version for readme and other repo updates
+
 # 0.23
 - my high IQ made this release
 
