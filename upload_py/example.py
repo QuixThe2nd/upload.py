@@ -10,6 +10,15 @@ file.url_full()
 file.metadata()
 print("")
 
+#anonfiles
+print("bayfiles:")
+file = bayfiles()
+file.upload(f"{os.getcwd()}/file.txt")
+file.url_short()
+file.url_full()
+file.metadata()
+print("")
+
 #starfiles
 print("starfiles:")
 file2 = starfiles()
