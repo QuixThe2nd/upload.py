@@ -10,7 +10,7 @@ Created by <a href="https://github.com/CrafterPika">CrafterPika</a> and <a href=
 - Debian based system (Ubuntu, Debian, Linux Mint, PopOS)
 - Windows 10
 - https://ish.app
-- Even jailbroken iOS Devices [Installation Guide](https://github.com/CrafterPika/upload.py/blob/main/docs/jailbroken-ios-installation.md)
+- Even jailbroken iOS Devices ([Installation Guide](https://github.com/CrafterPika/upload.py/blob/main/docs/jailbroken-ios-installation.md))
 
 ## Installation (Over PIP)
 1. Install python via your package manager or at [Python](https://python.org)
@@ -29,7 +29,7 @@ If pip doesn't work/shows up as invalid try this:
 and pip3/pip should work.
 
 ## Changelog
-- Change log is aviable at [here](https://github.com/CrafterPika/upload.py/blob/main/CHANGELOG.md)
+- Change log is aviable at [here](https://github.com/CrafterPika/upload.py/blob/main/docs/CHANGELOG.md)
 
 ### Example
 
