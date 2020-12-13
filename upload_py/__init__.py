@@ -86,7 +86,7 @@ class starfiles():
         files = {
             'upload': (f'{filename}', open( f'{filename}', 'rb')),
         }
-        response = requests.post('https://starfiles.co/api/upload/upload_file', files=files)
+        response = requests.post('https://api.starfiles.co/upload/upload_file', files=files)
         global file_url
         file_url = json.loads(response.text)
         global dwnld_star
@@ -98,16 +98,16 @@ class starfiles():
         return dwnld
 
     def url_file_direct(self):
-        dwnld = f"https://starfiles.ml/api/direct/{dwnld_star}"
+        dwnld = f"https://api.starfiles.co/direct/{dwnld_star}"
         return dwnld
 
     def url_ipa_install(self):
-        dwnld = f"itms-services://?action=download-manifest&url=https://starfiles.ml/api/installipa/{dwnld_star}"
+        dwnld = f"itms-services://?action=download-manifest&url=https://api.starfiles.co/installipa/{dwnld_star}"
         return dwnld
 
     def metadata(self):
         dwnld = file_url['file']
-        response = requests.post(f'https://starfiles.ml/api/file/fileinfo?file={dwnld_star}')
+        response = requests.post(f'https://api.starfiles.co/file/fileinfo?file={dwnld_star}')
         meta = json.loads(response.text)
         name = meta['name']
         size = meta['tidy_size']
